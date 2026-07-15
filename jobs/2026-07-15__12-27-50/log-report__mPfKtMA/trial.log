@@ -1,0 +1,18 @@
+Skipping image OS validation for hb__2a6c45e2cbdf1a56ae32e0c0acb25f91: docker inspect returned 1
+Collecting main service artifacts
+Failed to download artifact '/app/report.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "C:\Users\welcome\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\trial\artifact_handler.py", line 330, in _download_artifact
+    await source_env.service_download_file(
+  File "C:\Users\welcome\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 1025, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "C:\Users\welcome\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 1010, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "C:\Users\welcome\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker_unix.py", line 185, in download_file
+    await self._env._run_docker_compose_command(
+  File "C:\Users\welcome\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker.py", line 631, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__mpfktma__env --project-directory C:\Users\welcome\Downloads\fix-task-broken\log-report\environment -f C:\Users\welcome\AppData\Local\Temp\tmpug0ljhm9\log-report__mPfKtMA__env-docker-compose-resources.json -f C:\Users\welcome\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-build.yaml -f C:\Users\welcome\AppData\Local\Temp\tmp7zpk32vh\docker-compose-mounts.json -f C:\Users\welcome\AppData\Roaming\uv\tools\harbor\Lib\site-packages\harbor\environments\docker\docker-compose-egress-control.yaml -f C:\Users\welcome\AppData\Local\Temp\tmpsqt49nul\docker-compose-egress-control-services.json cp main:/app/report.json jobs\2026-07-15__12-27-50\log-report__mPfKtMA\artifacts\app\report.json. Return code: 1. Stdout:  log-report__mpfktma__env-main-1 Copying log-report__mpfktma__env-main-1:/app/report.json to jobs\2026-07-15__12-27-50\log-report__mPfKtMA\artifacts\app\report.json
+Error response from daemon: Could not find the file /app/report.json in container 8739a5252054ddacdfbfe6b4ff235c952d0e0396185c0a50c04c86a7b704ebff
+. Stderr: None. 
+Trial log-report__mPfKtMA failed: No reward file found at jobs\2026-07-15__12-27-50\log-report__mPfKtMA\verifier\reward.txt or jobs\2026-07-15__12-27-50\log-report__mPfKtMA\verifier\reward.json
